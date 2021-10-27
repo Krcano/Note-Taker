@@ -37,15 +37,16 @@ router.delete("/notes/:id", async(req, res, next) => {
   // use index to delete that object form the array using splice method
   // 4 write file again, redirect 'back'
 
-  // let parsedNotesArray = [];
-  // const parsedNotesArray = await fs.promises.readFile("./db/db.json", "utf-8");
   
-  // const indexOfdeleted =  parsedNotesArray.indexOf((deletedNote) => deletedNote.id === req.params.id )
-  // if (indexOfdeleted === req.params.id) {
-  //   parsedNotesArray.splice(indexOfdeleted, 1);
-  //   return  console.log(indexOfdeleted)
-  // }
-  // }else{console.log(error)}
+  const parsedNotesArray = await fs.promises.readFile("./db/db.json", "utf-8");
+  
+  const indexOfdeleted = JSON.parse(parsedNotesArray.indexOf((deletedNote) => deletedNote.id === req.params.id ))
+
+  if (indexOfdeleted === req.params.id) {
+    parsedNotesArray.slice(indexOfdeleted,(1));
+    return  console.log(indexOfdeleted)
+  
+  }else{console.log(error)}
 
   // 1st attempt not working
   // const notes = JSON.parse(fs.readFile("./db/db.json"));

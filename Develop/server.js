@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
-const dbJSON = require('./db/db.json')
+const notesRoute = require('./routes/notes')
+
 
 
 const PORT = process.env.PORT || 3001;
@@ -12,6 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 // Get Route for Homepage
 app.use(express.static('public'));
 app.get('/', (req, res)=> res.sendFile(path.join(__dirname, 'public/index.html')));
+
+app.use('/api', notesRoute)
 
 // get route for notes
 app.get('/notes', (req, res)=>

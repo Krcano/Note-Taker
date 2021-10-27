@@ -3,7 +3,10 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)
 
 ## Description
+This project is a note taker app that uses Node and Express to create and save notes. What I did for this project is make routes for the index and note files to be able to link together so that when the user presses the 'Get Started' button it fetches /notes.html page and responds with file with all the notes that either have already been written or are yet to be created. I also added a unique id to each note that is created by using the uuid package that is in the node module. In this project i used a feature that i have not used before which is the async/await. I used it in a couple different areas, for example I used it before the fs.readFile so that the file could be read before anything is done with the data in that file. I had a few challenges along the way like with using promises and .then which I later changed to the async/await and I also had issues getting the delete feature to work which is currently a work in progress.
 
+
+[Link to Video Description]()
 
 ## Installation
 

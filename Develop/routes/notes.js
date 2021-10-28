@@ -2,7 +2,7 @@ const router = require("express").Router();
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 
-// Post routes
+// Post route
 router.post("/notes", async (req, res) => {
   console.info(`${req.method} request received to add notes`);
   //await is making sure the db.json file is read before it assigns it to the variable and executes the rest of the code
@@ -22,12 +22,14 @@ router.post("/notes", async (req, res) => {
   res.redirect("back");
 });
 
+// Get route
 router.get("/notes", async (req, res) => {
   // makes sure the db.json file is read beofre it sends back the parsed notes to '/notes'
   const notes = await fs.promises.readFile("./db/db.json", "utf-8");
   res.send(JSON.parse(notes));
 });
 
+// Delete route
 router.delete("/notes/:id", async (req, res) => {
   // 1 read file, parse into json,
   // 2 create an array from parsed json,
@@ -36,12 +38,11 @@ router.delete("/notes/:id", async (req, res) => {
   // 4 write file again, redirect 'back'
 
   const notes = await fs.promises.readFile("./db/db.json", "utf-8");
-  // console.log(notes);
   const allNotes = JSON.parse(notes);
   const index = (element) => element.id === req.params.id;
   const noteIndex = allNotes.findIndex(index);
   console.log(`index is:${noteIndex}`);
-  allNotes.splice(noteIndex, 1)
+  allNotes.splice(noteIndex, 1);
   await fs.promises.writeFile("./db/db.json", JSON.stringify(allNotes));
   res.json(allNotes);
 });

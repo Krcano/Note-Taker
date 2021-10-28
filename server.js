@@ -9,18 +9,18 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", notesRoute);
 // Get Route for Homepage
-app.use(express.static("public"));
+app.use(express.static("Public"));
 app.get("/", (req, res) =>
-  res.sendFile(path.join(__dirname, "public/index.html"))
+  res.sendFile(path.join(__dirname, "Public/index.html"))
 );
 
 // get route for notes
 app.get("/notes", (req, res) =>
-  res.sendFile(path.join(__dirname, "public/notes.html"))
+  res.sendFile(path.join(__dirname, "Public/notes.html"))
 );
 
 app.get("*", (req, res) =>
-  res.sendFile(path.join(__dirname, "public/index.html"))
+  res.sendFile(path.join(__dirname, "Public/index.html"))
 );
 
 app.listen(PORT, () =>

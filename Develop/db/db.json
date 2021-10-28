@@ -1,12 +1,1 @@
-[
-  {
-    "title": "hello ",
-    "text": "goodbye",
-    "id": "e2c94710-22e8-4845-a2f6-263632d66213"
-  },
-  {
-    "title": "How to take Notes",
-    "text": "I'm taking notes in this text box.",
-    "id": "42b47f09-a611-43ac-91b2-4a3d51902567"
-  }
-]
+[{"title":"To do list","text":"mow lawn\nclean kitchen\ndust\nvacuum\nclean windows","id":"0b96f08c-b715-4aab-9834-5de57231c52f"},{"title":"grocery list","text":"eggs\nmilk\nbread\ncereal","id":"c163b17a-8060-4890-a789-70fb9c9a6538"},{"title":"Favorite Singers","text":"H.E.R.\nTori Kelly\nAdele\nAriana Grande\nAaliyah\nBeyonce\nMaroon 5","id":"f5a2d12b-c63c-4647-8c4b-ef9a815da01c"}]

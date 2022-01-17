@@ -13,6 +13,13 @@ To install the project the user must have Node.js and the Develop folder with th
 
 To get started press the 'Get Started' button that will take you to the notes page. then press the the '+' button on the top right corner of your screen to make a new note and and type away. After you're done writing your note a save button will pop up and you will have the option to save your note. Once you click save you you will see your new note pop up on the left side of your screen.
 
+
+| Technologies Used |
+| ----------------- |
+| Express.js     |
+|JavaScript |
+| HTML              |
+| CSS               |
 ## License
 
 MIT License
